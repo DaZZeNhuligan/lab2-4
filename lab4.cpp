@@ -10,7 +10,7 @@ float dayAverage(float* row, int h)
     float sum = 0.0f;
     for (int j = 0; j < h; ++j)
     {
-        sum += *(row + j);           // row[j], но через арифметику указателей
+        sum += *(row + j);          
     }
     return (h > 0) ? sum / h : 0.0f;
 }
@@ -25,7 +25,7 @@ float overallAverage(float** p, int d, int h)
 
     for (int i = 0; i < d; ++i)
     {
-        float* row = *(p + i);       // p[i]
+        float* row = *(p + i);       
         for (int j = 0; j < h; ++j)
         {
             sum += *(row + j);
@@ -106,4 +106,5 @@ int main()
     delete[] data;
 
     return 0;
+
 }
